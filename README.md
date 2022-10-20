@@ -1,4 +1,4 @@
-# vue-select ![Current Release](https://img.shields.io/github/release/sagalbot/vue-select.svg?style=flat-square) ![Release Date](https://img.shields.io/github/release-date/sagalbot/vue-select?style=flat-square) ![Bundle Size](https://flat.badgen.net/bundlephobia/min/vue-select) ![Monthly Downloads](https://img.shields.io/npm/dm/vue-select.svg?style=flat-square) [![Coverage Status](https://coveralls.io/repos/github/sagalbot/vue-select/badge.svg?branch=master)](https://coveralls.io/github/sagalbot/vue-select?branch=master) ![MIT License](https://img.shields.io/github/license/sagalbot/vue-select.svg?style=flat-square)
+# vue-select 
 
 > **Everything you wish the HTML `<select>` element could do, wrapped up into a lightweight, zero
 > dependency, extensible Vue component.**
@@ -38,29 +38,19 @@ Huge thanks to the [sponsors](https://github.com/sponsors/sagalbot) and [contrib
 > Vue 3 support is on the `beta` channel: `vue-select@beta`, and will become the new default when `v4` is released. See [#1579](https://github.com/sagalbot/vue-select/issues/1597) for more details!
 
 
-**Vue 3 / Vue Select 4.x-beta**
-```bash
-yarn add vue-select@beta
-
-# or use npm
-
-npm install vue-select@beta
-```
 
 **Vue 2 / Vue Select 3.x**
 ```bash
-yarn add vue-select
+# use npm
 
-# or use npm
-
-npm install vue-select
+npm install shipblu-vue-select
 ```
 
 Then, import and register the component:
 
 ```js
 import Vue from "vue";
-import vSelect from "vue-select";
+import vSelect from "shipblu-vue-select";
 
 Vue.component("sb-vue-select", vSelect);
 ```
