@@ -1,10 +1,10 @@
 import { mount, shallowMount } from '@vue/test-utils'
-import VueSelect from '../../src/components/Select'
+import ShipbluVueSelect from '../../src/components/Select'
 import { mountDefault } from '../helpers'
 
 describe('Reset on options change', () => {
   it('should not reset the selected value by default when the options property changes', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: { options: ['one'] },
     })
 
@@ -60,7 +60,7 @@ describe('Reset on options change', () => {
 
     it('should allow resetOnOptionsChange to be a function that returns true', async () => {
       let resetOnOptionsChange = () => true
-      const Select = shallowMount(VueSelect, {
+      const Select = shallowMount(ShipbluVueSelect, {
         propsData: { resetOnOptionsChange, options: ['one'], value: 'one' },
       })
       const spy = jest.spyOn(Select.vm, 'clearSelection')
@@ -73,7 +73,7 @@ describe('Reset on options change', () => {
 
     it('should allow resetOnOptionsChange to be a function that returns false', () => {
       let resetOnOptionsChange = () => false
-      const Select = shallowMount(VueSelect, {
+      const Select = shallowMount(ShipbluVueSelect, {
         propsData: { resetOnOptionsChange, options: ['one'], value: 'one' },
       })
       const spy = jest.spyOn(Select.vm, 'clearSelection')
@@ -85,7 +85,7 @@ describe('Reset on options change', () => {
     it('should reset the options if the selectedValue does not exist in the new options', async () => {
       let resetOnOptionsChange = (options, old, val) =>
         val.some((val) => options.includes(val))
-      const Select = shallowMount(VueSelect, {
+      const Select = shallowMount(ShipbluVueSelect, {
         propsData: { resetOnOptionsChange, options: ['one'], value: 'one' },
       })
       const spy = jest.spyOn(Select.vm, 'clearSelection')
@@ -103,7 +103,7 @@ describe('Reset on options change', () => {
   })
 
   it('should reset the selected value when the options property changes', async () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: { resetOnOptionsChange: true, options: ['one'] },
     })
 
@@ -116,7 +116,7 @@ describe('Reset on options change', () => {
   })
 
   it('should return correct selected value when the options property changes and a new option matches', async () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         value: 'one',
         options: [],

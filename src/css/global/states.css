@@ -34,7 +34,7 @@
  *  rearranging the child elements visually.
  */
 
-.v-select[dir='rtl'] {
+.sb-vue-select[dir='rtl'] {
     .vs__actions {
         padding: 0 3px 0 6px;
     }

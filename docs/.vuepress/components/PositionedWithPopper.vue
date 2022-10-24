@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-select
+    <sb-vue-select
       :options="countries"
       append-to-body
       :calculate-position="withPopper"
@@ -77,7 +77,7 @@ export default {
 </script>
 
 <style>
-.v-select.drop-up.vs--open .vs__dropdown-toggle {
+.sb-vue-select.drop-up.vs--open .vs__dropdown-toggle {
   border-radius: 0 0 4px 4px;
   border-top-color: transparent;
   border-bottom-color: rgba(60, 60, 60, 0.26);

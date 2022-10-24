@@ -58,7 +58,7 @@ module.exports = {
       'process.env': env,
     }),
     new MiniCssExtractPlugin({
-      filename: 'vue-select.css',
+      filename: 'shipblu-vue-select.css',
     }),
     new VueLoaderPlugin(),
   ],

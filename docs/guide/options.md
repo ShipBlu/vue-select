@@ -1,20 +1,20 @@
 ## Options Prop
 
-`vue-select` accepts arrays of primitive values or objects to use as options through the `options` prop:
+`shipblu-vue-select` accepts arrays of primitive values or objects to use as options through the `options` prop:
 
 ```html
 <!-- array of strings or numbers -->
-<v-select :options="['Canada', 'United States']"></v-select>
+<sb-vue-select :options="['Canada', 'United States']"></sb-vue-select>
 ```
 
-<v-select :options="['Canada', 'United States']"></v-select>
+<sb-vue-select :options="['Canada', 'United States']"></sb-vue-select>
 
 ```html
 <!-- or, an array of objects -->
-<v-select :options="[{label: 'Canada', code: 'ca'}]"></v-select>
+<sb-vue-select :options="[{label: 'Canada', code: 'ca'}]"></sb-vue-select>
 ```
 
-<v-select :options="[{label: 'Canada', code: 'ca'}]"></v-select>
+<sb-vue-select :options="[{label: 'Canada', code: 'ca'}]"></sb-vue-select>
 
 ## Option Labels
 
@@ -26,7 +26,7 @@ component. No further configuration is necessary.
 #### Options as Objects
 
 When `options` is an array of objects, the component must generate a label to be shown as the 
-options text. By default, `vue-select` will attempt to render `option.label` as the option label. 
+options text. By default, `shipblu-vue-select` will attempt to render `option.label` as the option label. 
 You might not have a `label` key in your objects, so you can set your own label to match your 
 source data using the `label {String}` prop.
 
@@ -42,13 +42,13 @@ For example, consider an object with `countryCode` and `countryName` properties:
 If you wanted to display `Canada` in the dropdown, you'd use the `countryName` key:
 
 ```html
-<v-select label="countryName" :options="countries"></v-select>
+<sb-vue-select label="countryName" :options="countries"></sb-vue-select>
 ```
 
 <country-select />
 
 ## Null / Empty Options
 
-`vue-select` requires the `options` prop to be an `array`. If you are using Vue in development 
+`shipblu-vue-select` requires the `options` prop to be an `array`. If you are using Vue in development 
 mode, you will get warnings attempting to pass anything other than an `array` to the `options` prop. 
 If you need a `null`/`empty` value, use an empty array `[]`.

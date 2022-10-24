@@ -6,15 +6,15 @@ Vue Select currently offers quite a few scoped slots, and you can check out the
 
 ### Scoped Slot `option`
 
-vue-select provides the scoped `option` slot in order to create custom dropdown templates.
+shipblu-vue-select provides the scoped `option` slot in order to create custom dropdown templates.
 
 ```html
-<v-select :options="options" label="title">
+<sb-vue-select :options="options" label="title">
   <template v-slot:option="option">
     <span :class="option.icon"></span>
     {{ option.title }}
   </template>
-</v-select>
+</sb-vue-select>
 ```
 
 Using the `option` slot with props `"option"` provides the current option variable to the template.

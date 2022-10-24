@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-select
+    <sb-vue-select
       :options="['Canada', 'United States']"
       :components="{ OpenIndicator }"
     />

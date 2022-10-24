@@ -34,7 +34,7 @@ export default {
     return h('div', {
       attrs: {
         id: 'ads',
-        'data-ea-publisher': 'vue-select',
+        'data-ea-publisher': 'shipblu-vue-select',
         'data-ea-type': 'image',
       },
       class: 'flat horizontal',

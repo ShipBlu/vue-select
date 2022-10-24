@@ -11,7 +11,7 @@ dynamically, so that it's only present if we don't have a selection.
 <ValidationRequired />
 
 ```html
-<v-select :options="books" label="title" v-model="selected">
+<sb-vue-select :options="books" label="title" v-model="selected">
   <template #search="{attributes, events}">
     <input
       class="vs__search"
@@ -20,5 +20,5 @@ dynamically, so that it's only present if we don't have a selection.
       v-on="events"
     />
   </template>
-</v-select>
+</sb-vue-select>
 ```

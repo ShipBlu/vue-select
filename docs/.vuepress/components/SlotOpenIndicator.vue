@@ -1,7 +1,7 @@
 <template>
-  <v-select>
+  <sb-vue-select>
     <template #open-indicator="{ attributes }">
       <span v-bind="attributes">🔽</span>
     </template>
-  </v-select>
+  </sb-vue-select>
 </template>

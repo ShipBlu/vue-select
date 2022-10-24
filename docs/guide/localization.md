@@ -3,7 +3,7 @@
 Vue Select supports RTL using the standard HTML API using the `dir` prop.
 
 ```html
-<v-select dir="rtl"></v-select>
+<sb-vue-select dir="rtl"></sb-vue-select>
 ```
 
 The `dir` prop accepts the same values as the [HTML spec](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir): 
@@ -25,9 +25,9 @@ All of the text within the component has been wrapped within [slots](https://vue
 ```
 *Implementation:*
 ```html
-<v-select>
+<sb-vue-select>
 	<i slot="spinner" class="icon icon-spinner"></i>
-</v-select>
+</sb-vue-select>
 ```
 
 ### No Options Text
@@ -37,9 +37,9 @@ All of the text within the component has been wrapped within [slots](https://vue
 ```
 *Implementation:*
 ```html
-<v-select>
+<sb-vue-select>
 	<div slot="no-options">No Options Here!</div>
-</v-select>
+</sb-vue-select>
 ```
 
 For a full list of component slots, view the [slots API docs](../api/slots.md).

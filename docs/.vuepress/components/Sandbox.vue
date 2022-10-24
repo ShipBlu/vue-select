@@ -3,7 +3,7 @@
     <div id="config">
       <div v-if="!hideHelp" class="list-item">
         <p>
-          Use the controls below to adjust the props used by the vue-select
+          Use the controls below to adjust the props used by the shipblu-vue-select
           components.
         </p>
         <p>
@@ -177,14 +177,14 @@
     <div id="sandbox">
       <slot v-bind="configuration">
         <div class="example">
-          <v-select
+          <sb-vue-select
             v-bind="configuration"
             placeholder="country objects"
-          ></v-select>
+          ></sb-vue-select>
         </div>
 
         <div class="example">
-          <v-select
+          <sb-vue-select
             v-bind="configuration"
             placeholder="country objects, using option scoped slots"
           >
@@ -194,11 +194,11 @@
             <template slot="option" slot-scope="option">
               {{ option.label }} ({{ option.value }})
             </template>
-          </v-select>
+          </sb-vue-select>
         </div>
 
         <div class="example">
-          <v-select
+          <sb-vue-select
             v-bind="configuration"
             :options="['cat', 'dog', 'bear']"
             placeholder="string options, option slots"
@@ -209,19 +209,19 @@
             <template slot="option" slot-scope="{ label }">
               {{ label }}
             </template>
-          </v-select>
+          </sb-vue-select>
         </div>
 
         <div class="example">
-          <v-select
+          <sb-vue-select
             v-bind="configuration"
             :options="[1, 5, 10]"
             placeholder="options=[1,5,10]"
-          ></v-select>
+          ></sb-vue-select>
         </div>
 
         <div class="example">
-          <v-select
+          <sb-vue-select
             v-bind="configuration"
             label="title"
             :options="optionDataSets.books"
@@ -235,26 +235,26 @@
                 `${option.author.firstName} ${option.author.lastName}`
               }}</em>
             </template>
-          </v-select>
+          </sb-vue-select>
         </div>
 
         <div class="example">
-          <v-select
+          <sb-vue-select
             v-bind="configuration"
             placeholder="search github repositories.."
             label="full_name"
             :options="ajaxRes"
             @search="search"
           >
-          </v-select>
+          </sb-vue-select>
         </div>
 
         <div class="example">
-          <v-select
+          <sb-vue-select
             v-bind="configuration"
             :options="[]"
             placeholder="options=[]"
-          ></v-select>
+          ></sb-vue-select>
         </div>
       </slot>
     </div>
@@ -369,7 +369,7 @@ export default {
   margin-bottom: 2rem;
 }
 
-.v-select {
+.sb-vue-select {
   width: 25em;
 }
 </style>

@@ -1,4 +1,4 @@
-import VueSelect from '../../src/components/Select'
+import ShipbluVueSelect from '../../src/components/Select'
 import { shallowMount } from '@vue/test-utils'
 import { selectWithProps } from '../helpers'
 
@@ -22,13 +22,13 @@ describe('Labels', () => {
     await Select.vm.$nextTick()
 
     expect(spy).toHaveBeenCalledWith(
-      '[vue-select warn]: Label key "option.label" does not exist in options object {}.' +
-        '\nhttps://vue-select.org/api/props.html#getoptionlabel'
+      '[shipblu-vue-select warn]: Label key "option.label" does not exist in options object {}.' +
+        '\nhttps://shipblu-vue-select.org/api/props.html#getoptionlabel'
     )
   })
 
   it('should display a placeholder if the value is empty', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         options: ['one'],
       },
@@ -44,14 +44,14 @@ describe('Labels', () => {
 
   describe('getOptionLabel', () => {
     it('will return undefined if the option lacks the label key', () => {
-      const getOptionLabel = VueSelect.props.getOptionLabel.default.bind({
+      const getOptionLabel = ShipbluVueSelect.props.getOptionLabel.default.bind({
         label: 'label',
       })
       expect(getOptionLabel({ name: 'vue' })).toEqual(undefined)
     })
 
     it('will return a string value for a valid key', () => {
-      const getOptionLabel = VueSelect.props.getOptionLabel.default.bind({
+      const getOptionLabel = ShipbluVueSelect.props.getOptionLabel.default.bind({
         label: 'label',
       })
       expect(getOptionLabel({ label: 'vue' })).toEqual('vue')
@@ -64,8 +64,8 @@ describe('Labels', () => {
      * @see https://github.com/vuejs/vue/pull/10229
      */
     xit('will not call getOptionLabel if both scoped option slots are used and a filter is provided', () => {
-      const spy = spyOn(VueSelect.props.getOptionLabel, 'default')
-      const Select = shallowMount(VueSelect, {
+      const spy = spyOn(ShipbluVueSelect.props.getOptionLabel, 'default')
+      const Select = shallowMount(ShipbluVueSelect, {
         propsData: {
           options: [{ name: 'one' }],
           filter: () => {},

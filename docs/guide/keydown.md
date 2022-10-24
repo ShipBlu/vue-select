@@ -19,7 +19,7 @@ keydown events while the search input has focus.
 ```js
 /**
  * @param map {Object} Mapped keyCode to handlers { <keyCode>:<callback> }
- * @param vm {VueSelect}
+ * @param vm {ShipbluVueSelect}
  * @return {Object}
  */
 (map, vm) => map,

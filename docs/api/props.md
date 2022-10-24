@@ -123,7 +123,7 @@ closeOnSelect: {
 
 ## components <Badge text="v3.1.0+" />
 
-API to overwrite default vue-select components with your own. This can be used to change the clear button or select chevron with your own markup.
+API to overwrite default shipblu-vue-select components with your own. This can be used to change the clear button or select chevron with your own markup.
 
 The object provided to the components prop will be merged with Vue Select's default components.
 
@@ -202,7 +202,7 @@ disabled: {
 
 Determines whether the dropdown should open. Used
 for overriding the default dropdown behaviour. Receives
-the vue-select instance as the single argument to the function.
+the shipblu-vue-select instance as the single argument to the function.
 
 ```js
 dropdownShouldOpen: {
@@ -287,10 +287,10 @@ getOptionKey: {
         return JSON.stringify(option)
       } catch(e) {
         return console.warn(
-          `[vue-select warn]: Could not stringify option ` +
+          `[shipblu-vue-select warn]: Could not stringify option ` +
           `to generate unique key. Please provide 'getOptionKey' prop ` +
           `to return a unique key for each option.\n` +
-          'https://vue-select.org/api/props.html#getoptionkey'
+          'https://shipblu-vue-select.org/api/props.html#getoptionkey'
         )
         return null
       }
@@ -317,9 +317,9 @@ getOptionLabel: {
     if (typeof option === 'object') {
       if (!option.hasOwnProperty(this.label)) {
         return console.warn(
-          `[vue-select warn]: Label key "option.${this.label}" does not` +
+          `[shipblu-vue-select warn]: Label key "option.${this.label}" does not` +
           ` exist in options object ${JSON.stringify(option)}.\n` +
-          'https://vue-select.org/api/props.html#getoptionlabel'
+          'https://shipblu-vue-select.org/api/props.html#getoptionlabel'
         )
       }
       return option[this.label]
@@ -343,7 +343,7 @@ inputId: {
 
 ## label
 
-Tells vue-select what key to use when generating option
+Tells shipblu-vue-select what key to use when generating option
 labels when each `option` is an object.
 
 ```js
@@ -426,7 +426,7 @@ onTab: {
 ## options
 
 An array of strings or objects to be used as dropdown choices.
-If you are using an array of objects, vue-select will look for
+If you are using an array of objects, shipblu-vue-select will look for
 a `label` key (ex. `[{label: 'Canada', value: 'CA'}]`). A
 custom label key can be set with the `label` prop.
 
@@ -571,7 +571,7 @@ taggable: {
 
 ## transition
 
-Sets a Vue transition property on the `.dropdown-menu`. vue-select
+Sets a Vue transition property on the `.dropdown-menu`. shipblu-vue-select
 does not include CSS for transitions, you'll need to add them yourself.
 
 ```js

@@ -1,15 +1,15 @@
 {
   "name": "shipblu-vue-select",
-  "version": "3.20.6",
+  "version": "3.20.7",
   "description": "Everything you wish the HTML <select> element could do, wrapped up into a lightweight, extensible Vue component.",
   "author": "George Eshak <george.eshak@shipblu.com>",
-  "homepage": "https://vue-select.org",
+  "homepage": "https://shipblu-vue-select.org",
   "directories": {
     "doc": "docs",
     "test": "tests"
   },
   "private": false,
-  "main": "dist/vue-select.js",
+  "main": "dist/shipblu-vue-select.js",
   "license": "MIT",
   "prepare": "npm run build",
   "scripts": {
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sagalbot/vue-select.git"
+    "url": "https://github.com/sagalbot/shipblu-vue-select.git"
   },
   "peerDependencies": {
     "vue": "2.x"
@@ -123,12 +123,12 @@
   "bundlewatch": {
     "files": [
       {
-        "path": "./dist/vue-select.js",
+        "path": "./dist/shipblu-vue-select.js",
         "compression": "none",
         "maxSize": "21 KB"
       },
       {
-        "path": "./dist/vue-select.css",
+        "path": "./dist/shipblu-vue-select.css",
         "compression": "none",
         "maxSize": "8 KB"
       }

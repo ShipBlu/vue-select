@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-select
+    <sb-vue-select
       v-model="selected"
       placeholder="choose a country"
       :components="{ Deselect }"

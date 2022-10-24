@@ -25,9 +25,9 @@ these use cases.
     characters typed in the textbox. 
   
     ```html
-    <v-select :filterable="false" :options="['No Autocomplete', 'List Autocomplete']" />
+    <sb-vue-select :filterable="false" :options="['No Autocomplete', 'List Autocomplete']" />
     ```
-    <v-select :filterable="false" :options="['No Autocomplete', 'List Autocomplete']" />
+    <sb-vue-select :filterable="false" :options="['No Autocomplete', 'List Autocomplete']" />
 
 2. **List autocomplete with manual selection**
 
@@ -36,9 +36,9 @@ these use cases.
     typed will become the value of the textbox unless the user selects a value in the popup.
 
     ```html
-    <v-select taggable :options="['No Autocomplete', 'List Autocomplete']" />
+    <sb-vue-select taggable :options="['No Autocomplete', 'List Autocomplete']" />
     ```
-    <v-select taggable :options="['No Autocomplete', 'List Autocomplete']" />
+    <sb-vue-select taggable :options="['No Autocomplete', 'List Autocomplete']" />
 
 3. **List autocomplete with automatic selection**
  
@@ -49,9 +49,9 @@ these use cases.
     character string in the textbox.
 
     ```html
-    <v-select :options="['No Autocomplete', 'List Autocomplete']" />
+    <sb-vue-select :options="['No Autocomplete', 'List Autocomplete']" />
     ```
-    <v-select :options="['No Autocomplete', 'List Autocomplete']" />
+    <sb-vue-select :options="['No Autocomplete', 'List Autocomplete']" />
 
 4. **List with inline autocomplete** 
     
@@ -61,4 +61,4 @@ these use cases.
       has a selected state.
       
     🚧 Vue Select does not yet support this configuration, but it is on the roadmap 
-    [#865](https://github.com/sagalbot/vue-select/issues/865). 🚧
+    [#865](https://github.com/sagalbot/shipblu-vue-select/issues/865). 🚧

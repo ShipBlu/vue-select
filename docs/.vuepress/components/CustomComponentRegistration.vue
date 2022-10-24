@@ -1,5 +1,5 @@
 <template>
-  <v-select
+  <sb-vue-select
     :options="['Vue.js', 'React', 'Angular']"
     :components="{ Deselect, OpenIndicator }"
   />

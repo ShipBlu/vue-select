@@ -1,9 +1,9 @@
 import { mount, shallowMount } from '@vue/test-utils'
-import VueSelect from '../../src/components/Select'
+import ShipbluVueSelect from '../../src/components/Select'
 
 describe('When reduce prop is defined', () => {
   it('can accept an array of objects and pre-selected value (single)', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         reduce: (option) => option.value,
         value: 'foo',
@@ -16,7 +16,7 @@ describe('When reduce prop is defined', () => {
   })
 
   it('can determine if an object is pre-selected', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         reduce: (option) => option.id,
         value: 'foo',
@@ -38,7 +38,7 @@ describe('When reduce prop is defined', () => {
   })
 
   it('can determine if an object is selected after its been chosen', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         reduce: (option) => option.id,
         options: [{ id: 'foo', label: 'FooBar' }],
@@ -56,7 +56,7 @@ describe('When reduce prop is defined', () => {
   })
 
   it('can accept an array of objects and pre-selected values (multiple)', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         multiple: true,
         reduce: (option) => option.value,
@@ -74,7 +74,7 @@ describe('When reduce prop is defined', () => {
   })
 
   it('can deselect a pre-selected object', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         multiple: true,
         reduce: (option) => option.value,
@@ -92,7 +92,7 @@ describe('When reduce prop is defined', () => {
   })
 
   it('can deselect an option when multiple is false', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         reduce: (option) => option.value,
         options: [
@@ -117,7 +117,7 @@ describe('When reduce prop is defined', () => {
           { label: 'This is Baz', value: 'baz' },
         ],
       }),
-      components: { 'v-select': VueSelect },
+      components: { 'sb-vue-select': ShipbluVueSelect },
       computed: {
         value: {
           get() {
@@ -130,7 +130,7 @@ describe('When reduce prop is defined', () => {
         },
       },
       template: `
-        <v-select
+        <sb-vue-select
           v-model="value"
           :reduce="option => option.value"
           :options="options"
@@ -161,7 +161,7 @@ describe('When reduce prop is defined', () => {
   })
 
   it('can generate labels using a custom label key', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         multiple: true,
         reduce: (option) => option.value,
@@ -179,7 +179,7 @@ describe('When reduce prop is defined', () => {
 
   it('can find the original option within this.options', () => {
     const optionToFind = { id: 1, label: 'Foo' }
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         reduce: (option) => option.id,
         options: [optionToFind, { id: 2, label: 'Bar' }],
@@ -194,7 +194,7 @@ describe('When reduce prop is defined', () => {
 
   it('can work with falsey values', () => {
     const option = { value: 0, label: 'No' }
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         reduce: (option) => option.value,
         options: [option, { value: 1, label: 'Yes' }],
@@ -208,7 +208,7 @@ describe('When reduce prop is defined', () => {
 
   it('works with null values', () => {
     const option = { value: null, label: 'No' }
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         reduce: (option) => option.value,
         options: [option, { value: 1, label: 'Yes' }],
@@ -223,7 +223,7 @@ describe('When reduce prop is defined', () => {
   describe('And when a reduced option is a nested object', () => {
     it('can determine if an object is pre-selected', () => {
       const nestedOption = { value: { nested: true }, label: 'foo' }
-      const Select = shallowMount(VueSelect, {
+      const Select = shallowMount(ShipbluVueSelect, {
         propsData: {
           reduce: (option) => option.value,
           value: {
@@ -238,7 +238,7 @@ describe('When reduce prop is defined', () => {
 
     it('can determine if an object is selected after it is chosen', () => {
       const nestedOption = { value: { nested: true }, label: 'foo' }
-      const Select = shallowMount(VueSelect, {
+      const Select = shallowMount(ShipbluVueSelect, {
         propsData: {
           reduce: (option) => option.value,
           options: [nestedOption],
@@ -252,7 +252,7 @@ describe('When reduce prop is defined', () => {
 
   it('reacts correctly when value property changes', async () => {
     const optionToChangeTo = { id: 1, label: 'Foo' }
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         value: 2,
         reduce: (option) => option.id,
@@ -271,7 +271,7 @@ describe('When reduce prop is defined', () => {
       const Parent = mount({
         data: () => ({ selected: null, options: [] }),
         template: `
-          <v-select
+          <sb-vue-select
             v-model="selected"
             :options="options"
             taggable
@@ -279,7 +279,7 @@ describe('When reduce prop is defined', () => {
             :create-option="label => ({ label, value: -1 })"
           />
         `,
-        components: { 'v-select': VueSelect },
+        components: { 'sb-vue-select': ShipbluVueSelect },
       })
       const Select = Parent.vm.$children[0]
 

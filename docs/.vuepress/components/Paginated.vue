@@ -1,10 +1,10 @@
 <template>
-  <v-select :options="paginated" :filterable="false" @search="onSearch">
+  <sb-vue-select :options="paginated" :filterable="false" @search="onSearch">
     <li slot="list-footer" class="pagination">
       <button :disabled="!hasPrevPage" @click="offset -= limit">Prev</button>
       <button :disabled="!hasNextPage" @click="offset += limit">Next</button>
     </li>
-  </v-select>
+  </sb-vue-select>
 </template>
 
 <script>

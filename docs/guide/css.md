@@ -40,7 +40,7 @@ recommended approach is to leverage the included CSS variables instead.
 
 Variables are leveraged in as much of the component styles as possible. If you really want to dig
 into the SCSS, the files are located in `src/scss`. The variables listed below can be found at
-[`src/scss/global/_variables`](https://github.com/sagalbot/vue-select/blob/master/src/scss/global/_variables.scss)
+[`src/scss/global/_variables`](https://github.com/sagalbot/shipblu-vue-select/blob/master/src/scss/global/_variables.scss)
 .
 
 All variables are implemented with `!default` in order to make them easier to override in your
@@ -57,7 +57,7 @@ Most classes within Vue Select use the `vs__` prefix, and selectors are generall
 – unless there is a state being applied to the component.
 
 In order to override a default property in your app, you should add one level of specificity. The
-easiest way to do this, is to add `.v-select` before the `vs__*` selector if you want to adjust all
+easiest way to do this, is to add `.sb-vue-select` before the `vs__*` selector if you want to adjust all
 instances of Vue Select, or add your own classname if you just want to affect one.
 
 <CssSpecificity />  
@@ -75,7 +75,7 @@ transition name is `vs__fade`. There's a couple ways to override or change this 
 
 ```html
 
-<v-select transition="" />
+<sb-vue-select transition="" />
 ```
 
 2. You can also override the default CSS for the `vs__fade` transition. Again, if you wanted to

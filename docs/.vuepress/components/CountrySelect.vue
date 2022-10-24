@@ -1,5 +1,5 @@
 <template>
-  <v-select :options="options"></v-select>
+  <sb-vue-select :options="options"></sb-vue-select>
 </template>
 
 <script>

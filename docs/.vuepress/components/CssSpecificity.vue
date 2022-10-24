@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-select
+    <sb-vue-select
       class="style-chooser"
       placeholder="Choose a Styling Option"
       :options="['Components', 'CSS / Variables', 'Slots']"

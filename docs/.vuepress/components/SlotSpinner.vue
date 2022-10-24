@@ -1,5 +1,5 @@
 <template>
-  <v-select :loading="true">
+  <sb-vue-select :loading="true">
     <template #spinner="{ loading }">
       <div
         v-if="loading"
@@ -9,5 +9,5 @@
         The .vs__spinner class will hide the text for me.
       </div>
     </template>
-  </v-select>
+  </sb-vue-select>
 </template>

@@ -89,7 +89,7 @@ this.$emit('search', this.search, this.toggleLoading);
 
 ```vue
 <!-- example usage -->
-<v-select
+<sb-vue-select
     @search="(search, loading) => { 
       loading(true)
       fetchOptions(search).then(() => loading(false))

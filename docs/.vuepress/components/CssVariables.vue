@@ -1,6 +1,6 @@
 <template>
   <div style="background: #282c34; padding: 1rem; border-radius: 0.3rem">
-    <v-select :options="countries" />
+    <sb-vue-select :options="countries" />
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="flex">
     <div>
-      <v-select
+      <sb-vue-select
         v-model="selected"
         label="country"
         :reduce="(opt) => opt.meta.id"

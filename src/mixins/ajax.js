@@ -2,7 +2,7 @@ export default {
   props: {
     /**
      * Toggles the adding of a 'loading' class to the main
-     * .v-select wrapper. Useful to control UI state when
+     * .sb-vue-select wrapper. Useful to control UI state when
      * results are being processed through AJAX.
      */
     loading: {

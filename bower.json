@@ -1,18 +1,18 @@
 {
-  "name": "vue-select",
+  "name": "shipblu-vue-select",
   "description": "A native Vue.js select component that provides similar functionality to Select2/Chosen without the overhead of jQuery.",
-  "main": "dist/vue-select.js",
+  "main": "dist/shipblu-vue-select.js",
   "authors": [
     "Jeff Sagal <sagalbot@gmail.com>"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/sagalbot/vue-select"
+    "url": "https://github.com/sagalbot/shipblu-vue-select"
   },
   "license": "MIT",
   "keywords": [
     "vue.js",
-    "vue-select",
+    "shipblu-vue-select",
     "select2",
     "tagging"
   ],
@@ -21,7 +21,7 @@
     "node",
     "es6"
   ],
-  "homepage": "http://sagalbot.github.io/vue-select/",
+  "homepage": "http://sagalbot.github.io/shipblu-vue-select/",
   "ignore": [
     "**/.*",
     "node_modules",

@@ -1,5 +1,5 @@
 <template>
-  <v-select
+  <sb-vue-select
     :options="paginated"
     :filterable="false"
     @open="onOpen"
@@ -11,7 +11,7 @@
         Loading more options...
       </li>
     </template>
-  </v-select>
+  </sb-vue-select>
 </template>
 
 <script>

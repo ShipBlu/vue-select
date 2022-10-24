@@ -3,7 +3,7 @@
 </style>
 
 <template>
-  <div :dir="dir" class="v-select" :class="stateClasses">
+  <div :dir="dir" class="sb-vue-select" :class="stateClasses">
     <slot name="header" v-bind="scope.header" />
     <div
       :id="`vs${uid}__combobox`"
@@ -26,7 +26,7 @@
         >
           <span :key="getOptionKey(option)" class="vs__selected">
             <div class="labels-parent">
-              <p class="first-label"> 
+              <p class="first-label">
                 <slot name="option" v-bind="normalizeOptionForSlot(option)">
                   {{ getOptionLabel(option) }}
                 </slot>
@@ -119,7 +119,7 @@
           @mouseover="selectable(option) ? (typeAheadPointer = index) : null"
           @click.prevent.stop="selectable(option) ? select(option) : null"
         >
-          <p class="first-label"> 
+          <p class="first-label">
             <slot name="option" v-bind="normalizeOptionForSlot(option)">
               {{ getOptionLabel(option) }}
             </slot>
@@ -158,7 +158,7 @@ import sortAndStringify from '../utility/sortAndStringify.js'
 import uniqueId from '../utility/uniqueId.js'
 
 /**
- * @name VueSelect
+ * @name ShipbluVueSelect
  */
 export default {
   components: { ...childComponents },
@@ -181,7 +181,7 @@ export default {
      * An object with any custom components that you'd like to overwrite
      * the default implementation of in your app. The keys in this object
      * will be merged with the defaults.
-     * @see https://vue-select.org/guide/components.html
+     * @see https://shipblu-vue-select.org/guide/components.html
      * @type {Function}
      */
     components: {
@@ -191,7 +191,7 @@ export default {
 
     /**
      * An array of strings or objects to be used as dropdown choices.
-     * If you are using an array of objects, vue-select will look for
+     * If you are using an array of objects, shipblu-vue-select will look for
      * a `label` key (ex. [{label: 'This is Foo', value: 'foo'}]). A
      * custom label key can be set with the `label` prop.
      * @type {Array}
@@ -287,7 +287,7 @@ export default {
     },
 
     /**
-     * Tells vue-select what key to use when generating option
+     * Tells shipblu-vue-select what key to use when generating option
      * labels when each `option` is an object.
      * @type {String}
      */
@@ -356,9 +356,9 @@ export default {
         if (typeof option === 'object') {
           if (!option.hasOwnProperty(this.label)) {
             return console.warn(
-              `[vue-select warn]: Label key "option.${this.label}" does not` +
+              `[shipblu-vue-select warn]: Label key "option.${this.label}" does not` +
                 ` exist in options object ${JSON.stringify(option)}.\n` +
-                'https://vue-select.org/api/props.html#getoptionlabel'
+                'https://shipblu-vue-select.org/api/props.html#getoptionlabel'
             )
           }
           return option[this.label]
@@ -409,10 +409,10 @@ export default {
             : sortAndStringify(option)
         } catch (e) {
           const warning =
-            `[vue-select warn]: Could not stringify this option ` +
+            `[shipblu-vue-select warn]: Could not stringify this option ` +
             `to generate unique key. Please provide'getOptionKey' prop ` +
             `to return a unique key for each option.\n` +
-            'https://vue-select.org/api/props.html#getoptionkey'
+            'https://shipblu-vue-select.org/api/props.html#getoptionkey'
           return console.warn(warning, option, e)
         }
       },
@@ -629,7 +629,7 @@ export default {
       type: Function,
       /**
        * @param map {Object}
-       * @param vm {VueSelect}
+       * @param vm {ShipbluVueSelect}
        * @return {Object}
        */
       default: (map, vm) => map,
@@ -655,7 +655,7 @@ export default {
      * This allows for any garbage collection you may need to do.
      *
      * @since v3.7.0
-     * @see http://vue-select.org/guide/positioning.html
+     * @see http://shipblu-vue-select.org/guide/positioning.html
      */
     calculatePosition: {
       type: Function,
@@ -1189,7 +1189,7 @@ export default {
        * This second loop is needed to cover an edge case where `taggable` + `reduce`
        * were used in conjunction with a `create-option` that doesn't create a
        * unique reduced value.
-       * @see https://github.com/sagalbot/vue-select/issues/1089#issuecomment-597238735
+       * @see https://github.com/sagalbot/shipblu-vue-select/issues/1089#issuecomment-597238735
        */
       return (
         matches.find((match) =>
@@ -1315,7 +1315,7 @@ export default {
      * firing a `blur` event when clicking
      * the dropdown's scrollbar, causing it
      * to collapse abruptly.
-     * @see https://github.com/sagalbot/vue-select/issues/106
+     * @see https://github.com/sagalbot/shipblu-vue-select/issues/106
      * @return {void}
      */
     onMousedown() {
@@ -1324,7 +1324,7 @@ export default {
 
     /**
      * Event-Handler to help workaround IE11 (probably fixes 10 as well)
-     * @see https://github.com/sagalbot/vue-select/issues/106
+     * @see https://github.com/sagalbot/shipblu-vue-select/issues/106
      * @return {void}
      */
     onMouseUp() {
@@ -1383,7 +1383,7 @@ export default {
   line-height: 2;
 }
 .second-label {
-  color: #626262; 
+  color: #626262;
   font-size: 13px;
 }
 .labels-parent:hover p {

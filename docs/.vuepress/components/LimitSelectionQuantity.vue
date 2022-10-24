@@ -1,5 +1,5 @@
 <template>
-  <v-select
+  <sb-vue-select
     v-model="selected"
     multiple
     placeholder="Choose up to 3 books!"

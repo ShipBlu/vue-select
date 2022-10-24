@@ -9,7 +9,7 @@
         <a :href="html_url">@{{ login }}</a>
         <br /><a
           class="contributions-link"
-          :href="`https://github.com/sagalbot/vue-select/commits?author=${login}`"
+          :href="`https://github.com/sagalbot/shipblu-vue-select/commits?author=${login}`"
           >{{ contributions }} contributions</a
         >
       </div>

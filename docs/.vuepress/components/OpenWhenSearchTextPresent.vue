@@ -1,5 +1,5 @@
 <template>
-  <v-select
+  <sb-vue-select
     v-model="country"
     :options="countries"
     :dropdown-should-open="dropdownShouldOpen"
@@ -17,12 +17,12 @@ export default {
     }
   },
   methods: {
-    dropdownShouldOpen(VueSelect) {
+    dropdownShouldOpen(ShipbluVueSelect) {
       if (this.country !== null) {
-        return VueSelect.open
+        return ShipbluVueSelect.open
       }
 
-      return VueSelect.search.length !== 0 && VueSelect.open
+      return ShipbluVueSelect.search.length !== 0 && ShipbluVueSelect.open
     },
   },
 }

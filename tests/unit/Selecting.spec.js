@@ -1,5 +1,5 @@
 import { mount, shallowMount } from '@vue/test-utils'
-import VueSelect from '../../src/components/Select.vue'
+import ShipbluVueSelect from '../../src/components/Select.vue'
 import { mountDefault } from '../helpers'
 
 describe('VS - Selecting Values', () => {
@@ -13,14 +13,14 @@ describe('VS - Selecting Values', () => {
   })
 
   it('can accept an array with pre-selected values', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: defaultProps,
     })
     expect(Select.selectedValue).toEqual(Select.value)
   })
 
   it('can accept an array of objects and pre-selected value (single)', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         value: { label: 'This is Foo', value: 'foo' },
         options: [
@@ -33,7 +33,7 @@ describe('VS - Selecting Values', () => {
   })
 
   it('can accept an array of objects and pre-selected values (multiple)', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         value: [
           { label: 'This is Foo', value: 'foo' },
@@ -51,7 +51,7 @@ describe('VS - Selecting Values', () => {
   })
 
   it('can select an option on tab', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         selectOnTab: true,
       },
@@ -65,7 +65,7 @@ describe('VS - Selecting Values', () => {
   })
 
   it('can deselect a pre-selected object', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         multiple: true,
         options: [
@@ -87,7 +87,7 @@ describe('VS - Selecting Values', () => {
   })
 
   it('can deselect a pre-selected string', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         multiple: true,
         options: ['foo', 'bar'],
@@ -101,7 +101,7 @@ describe('VS - Selecting Values', () => {
   })
 
   it('can deselect an option when multiple is false', () => {
-    const Select = shallowMount(VueSelect)
+    const Select = shallowMount(ShipbluVueSelect)
 
     Select.vm.$data._value = 'foo'
 
@@ -110,7 +110,7 @@ describe('VS - Selecting Values', () => {
   })
 
   it('can determine if the value prop is empty', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         options: ['one', 'two', 'three'],
       },
@@ -136,7 +136,7 @@ describe('VS - Selecting Values', () => {
   })
 
   it('should reset the selected values when the multiple property changes', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         multiple: true,
         options: ['one', 'two', 'three'],
@@ -151,7 +151,7 @@ describe('VS - Selecting Values', () => {
   })
 
   it('can retain values present in a new array of options', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         value: ['one'],
         options: ['one', 'two', 'three'],
@@ -163,7 +163,7 @@ describe('VS - Selecting Values', () => {
   })
 
   it('can determine if an object is already selected', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         value: [{ label: 'one' }],
         options: [{ label: 'one' }],
@@ -176,8 +176,8 @@ describe('VS - Selecting Values', () => {
   it('can use v-model syntax for a two way binding to a parent component', () => {
     const Parent = mount({
       data: () => ({ value: 'foo', options: ['foo', 'bar', 'baz'] }),
-      template: `<div><v-select :options="options" v-model="value" /></div>`,
-      components: { 'v-select': VueSelect },
+      template: `<div><sb-vue-select :options="options" v-model="value" /></div>`,
+      components: { 'sb-vue-select': ShipbluVueSelect },
     })
     const Select = Parent.vm.$children[0]
 
@@ -189,7 +189,7 @@ describe('VS - Selecting Values', () => {
   })
 
   it('can check if a string value is selected when the value is an object and multiple is true', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         multiple: true,
         value: [{ label: 'foo', value: 'bar' }],
@@ -232,13 +232,13 @@ describe('VS - Selecting Values', () => {
 
   describe('input Event', () => {
     it('will trigger the input event when the selection changes', () => {
-      const Select = shallowMount(VueSelect)
+      const Select = shallowMount(ShipbluVueSelect)
       Select.vm.select('bar')
       expect(Select.emitted('input')[0]).toEqual(['bar'])
     })
 
     it('will trigger the input event when the selection changes and multiple is true', () => {
-      const Select = shallowMount(VueSelect, {
+      const Select = shallowMount(ShipbluVueSelect, {
         propsData: { multiple: true, value: ['foo'], options: ['foo', 'bar'] },
       })
       Select.vm.select('bar')
@@ -246,7 +246,7 @@ describe('VS - Selecting Values', () => {
     })
 
     it('will not trigger the input event when multiple is true and selection is repeated', () => {
-      const Select = shallowMount(VueSelect, {
+      const Select = shallowMount(ShipbluVueSelect, {
         propsData: {
           multiple: true,
           value: ['foo ', 'bar'],
@@ -261,13 +261,13 @@ describe('VS - Selecting Values', () => {
 
   describe('option:selecting Event', () => {
     it('will trigger the option:selecting event when an option is selected', () => {
-      const Select = shallowMount(VueSelect)
+      const Select = shallowMount(ShipbluVueSelect)
       Select.vm.select('bar')
       expect(Select.emitted('option:selecting')[0]).toEqual(['bar'])
     })
 
     it('will trigger the option:selecting event regardless of current value', () => {
-      const Select = shallowMount(VueSelect, {
+      const Select = shallowMount(ShipbluVueSelect, {
         propsData: { value: ['foo'], options: ['foo', 'bar'] },
       })
       Select.vm.select('foo')
@@ -276,7 +276,7 @@ describe('VS - Selecting Values', () => {
     })
 
     it('will trigger the option:selecting event with current selected item when multiple is true', () => {
-      const Select = shallowMount(VueSelect, {
+      const Select = shallowMount(ShipbluVueSelect, {
         propsData: { multiple: true, value: ['foo'], options: ['foo', 'bar'] },
       })
       Select.vm.select('bar')
@@ -284,7 +284,7 @@ describe('VS - Selecting Values', () => {
     })
 
     it('will trigger the option:selecting event regardless of current value when multiple is true', () => {
-      const Select = shallowMount(VueSelect, {
+      const Select = shallowMount(ShipbluVueSelect, {
         propsData: {
           multiple: true,
           value: ['foo', 'bar'],
@@ -299,7 +299,7 @@ describe('VS - Selecting Values', () => {
 
   describe('option:deselected Event', () => {
     it('will trigger the option:deselected event when an option is deselected', () => {
-      const Select = shallowMount(VueSelect, {
+      const Select = shallowMount(ShipbluVueSelect, {
         propsData: { value: ['foo'], options: ['foo', 'bar'] },
       })
       Select.vm.deselect('foo')
@@ -307,7 +307,7 @@ describe('VS - Selecting Values', () => {
     })
 
     it('will trigger the option:deselected event regardless of current value', () => {
-      const Select = shallowMount(VueSelect, {
+      const Select = shallowMount(ShipbluVueSelect, {
         propsData: { value: ['foo'], options: ['foo', 'bar'] },
       })
       Select.vm.deselect('foo')
@@ -316,7 +316,7 @@ describe('VS - Selecting Values', () => {
     })
 
     it('will trigger the option:selected event with current selected item when multiple is true', () => {
-      const Select = shallowMount(VueSelect, {
+      const Select = shallowMount(ShipbluVueSelect, {
         propsData: { multiple: true, value: ['foo'], options: ['foo', 'bar'] },
       })
       Select.vm.deselect('bar')
@@ -324,7 +324,7 @@ describe('VS - Selecting Values', () => {
     })
 
     it('will trigger the option:selected event regardless of current value when multiple is true', () => {
-      const Select = shallowMount(VueSelect, {
+      const Select = shallowMount(ShipbluVueSelect, {
         propsData: {
           multiple: true,
           value: ['foo', 'bar'],

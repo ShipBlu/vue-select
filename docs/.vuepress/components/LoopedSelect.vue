@@ -7,7 +7,7 @@
     <tr v-for="person in people" :key="person.name">
       <td>{{ person.name }}</td>
       <td>
-        <v-select
+        <sb-vue-select
           :options="options"
           :value="person.country"
           @input="(country) => updateCountry(person, country)"

@@ -2,13 +2,13 @@
 
 ### `v-model`
 
-The most common use case for vue-select is to have the chosen value synced with a parent component.
-vue-select takes advantage of the `v-model` syntax to sync values with a parent. The `v-model`
+The most common use case for shipblu-vue-select is to have the chosen value synced with a parent component.
+shipblu-vue-select takes advantage of the `v-model` syntax to sync values with a parent. The `v-model`
 syntax works with primitives and objects.
 
 ```html
 
-<v-select v-model="selected" />
+<sb-vue-select v-model="selected" />
 ```
 
 Note that when using the `multiple` prop, the `v-model` value will always be an array.
@@ -20,17 +20,17 @@ with [Vuex](https://vuex.vuejs.org), you'll need to trigger a mutation rather th
 directly. In that case, maybe you need to bind a pre-selected value, and trigger a mutation when it
 changes.
 
-vue-select exposes the `value` prop and an `input` event to enable this. This combo of props and
+shipblu-vue-select exposes the `value` prop and an `input` event to enable this. This combo of props and
 events is also how Vue wires up the `v-model` syntax internally.
 
 #### Prop: `value`
 
-The `value` prop lets vue-select know what value is currently selected. It will accept strings,
-numbers or objects. If you're using a `multiple` v-select, you'll want to pass an array.
+The `value` prop lets shipblu-vue-select know what value is currently selected. It will accept strings,
+numbers or objects. If you're using a `multiple` sb-vue-select, you'll want to pass an array.
 
 ```html
 
-<v-select :value="selected" />
+<sb-vue-select :value="selected" />
 ```
 
 ::: tip 🤓 Anytime you bind the `value` prop directly, you're responsible for updating the bound
@@ -50,7 +50,7 @@ mutation, or dispatch an action – or anything else you might need to do when t
 
 ```html
 
-<v-select :value="$store.myValue" @input="setSelected" />
+<sb-vue-select :value="$store.myValue" @input="setSelected" />
 ```
 
 ```js
@@ -64,27 +64,27 @@ methods: {
 
 ## Single/Multiple
 
-By default, vue-select supports choosing a single value. If you need multiple values, use the
+By default, shipblu-vue-select supports choosing a single value. If you need multiple values, use the
 `multiple` boolean prop, much the same way you would on an HTML `<select>` element. When `multiple`
 is true, `v-model` and `value` must be an array.
 
 ```html
 
-<v-select multiple v-model="selected" :options="['Canada','United States']" />
+<sb-vue-select multiple v-model="selected" :options="['Canada','United States']" />
 ```
 
-<v-select multiple :options="['Canada','United States']" />
+<sb-vue-select multiple :options="['Canada','United States']" />
 
 ## Transforming Selections
 
-When the `options` array contains objects, vue-select returns the whole object as dropdown value
+When the `options` array contains objects, shipblu-vue-select returns the whole object as dropdown value
 upon selection. This approach makes no assumptions about the data you need, and provides a lot of
 flexibility. However, there will be situations where you just need to return a single key from an
 object.
 
 ### Returning a single key with `reduce`
 
-If you need to return a single key, or transform the selection before it is synced, vue-select
+If you need to return a single key, or transform the selection before it is synced, shipblu-vue-select
 provides a `reduce` callback that allows you to transform a selected option before it is passed to
 the `@input` event. Consider this data structure:
 
@@ -97,7 +97,7 @@ prop to receive only the data that's required.
 
  ```html
 
-<v-select :options="options" :reduce="country => country.code" label="country" />
+<sb-vue-select :options="options" :reduce="country => country.code" label="country" />
  ```
 
 ### Deep Nested Values
@@ -116,7 +116,7 @@ The `reduce` property also works well when you have a deeply nested value:
 
  ```html
 
-<v-select :options="options" :reduce="country => country.meta.code" label="country" />
+<sb-vue-select :options="options" :reduce="country => country.meta.code" label="country" />
  ```
 
  <reducer-nested-value />
@@ -149,19 +149,19 @@ To allow input that's not present within the options, set the `taggable` prop to
 
 ```html
 
-<v-select taggable multiple />
+<sb-vue-select taggable multiple />
 ```
 
-<v-select taggable multiple />
+<sb-vue-select taggable multiple />
 
 If you want added tags to be pushed to the options array, set `push-tags` to true.
 
 ```html
 
-<v-select taggable multiple push-tags />
+<sb-vue-select taggable multiple push-tags />
 ```
 
-<v-select taggable multiple push-tags />
+<sb-vue-select taggable multiple push-tags />
 
 ### Using `taggable` & `reduce` together
 
@@ -195,7 +195,7 @@ const options = [
 
 ```html
 
-<v-select
+<sb-vue-select
     taggable
     multiple
     label="title"

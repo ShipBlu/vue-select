@@ -1,5 +1,5 @@
 <template>
-  <v-select
+  <sb-vue-select
     taggable
     multiple
     no-drop

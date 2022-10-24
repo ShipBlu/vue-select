@@ -1,9 +1,9 @@
 import { shallowMount } from '@vue/test-utils'
-import VueSelect from '../../src/components/Select'
+import ShipbluVueSelect from '../../src/components/Select'
 
 describe('Filtering Options', () => {
   it("should update the search value when the input element receives the 'input' event", () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: { options: ['foo', 'bar', 'baz'] },
     })
 
@@ -14,7 +14,7 @@ describe('Filtering Options', () => {
   })
 
   it('should filter an array of strings', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: { options: ['foo', 'bar', 'baz'] },
     })
     Select.vm.search = 'ba'
@@ -22,7 +22,7 @@ describe('Filtering Options', () => {
   })
 
   it('should not filter the array of strings if filterable is false', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: { options: ['foo', 'bar', 'baz'], filterable: false },
     })
     Select.vm.search = 'ba'
@@ -30,7 +30,7 @@ describe('Filtering Options', () => {
   })
 
   it('should filter without case-sensitivity', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: { options: ['Foo', 'Bar', 'Baz'] },
     })
     Select.vm.search = 'ba'
@@ -38,7 +38,7 @@ describe('Filtering Options', () => {
   })
 
   it('can filter an array of objects based on the objects label key', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         options: [{ label: 'Foo' }, { label: 'Bar' }, { label: 'Baz' }],
       },
@@ -51,7 +51,7 @@ describe('Filtering Options', () => {
   })
 
   it('can determine if a given option should match the current search text', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         options: [{ label: 'Aoo' }, { label: 'Bar' }, { label: 'Baz' }],
         filterBy: (option, label, search) =>
@@ -64,7 +64,7 @@ describe('Filtering Options', () => {
   })
 
   it('can use a custom filtering method', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         options: ['foo', 'bar', 'baz'],
         filterBy: (option, label) => label.includes('o'),
@@ -75,7 +75,7 @@ describe('Filtering Options', () => {
   })
 
   it('can filter arrays of numbers', () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         options: [1, 5, 10],
       },

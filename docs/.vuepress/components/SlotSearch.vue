@@ -1,5 +1,5 @@
 <template>
-  <v-select>
+  <sb-vue-select>
     <template #search="{ attributes, events }">
       <input
         maxlength="1"
@@ -8,5 +8,5 @@
         v-on="events"
       />
     </template>
-  </v-select>
+  </sb-vue-select>
 </template>

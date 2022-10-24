@@ -1,6 +1,6 @@
 <template>
   <form @submit.stop="onSubmit">
-    <v-select v-model="selected" :options="books" label="title">
+    <sb-vue-select v-model="selected" :options="books" label="title">
       <template #search="{ attributes, events }">
         <input
           :required="!selected"
@@ -9,7 +9,7 @@
           v-on="events"
         />
       </template>
-    </v-select>
+    </sb-vue-select>
 
     <input type="submit" />
   </form>
@@ -36,7 +36,7 @@ form {
   align-items: stretch;
 }
 
-.v-select {
+.sb-vue-select {
   width: 75%;
 }
 

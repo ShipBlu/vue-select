@@ -12,10 +12,10 @@ const options = [{country: 'Canada', code: 'CA'},];
  
 ```html
 <!-- v2: using index --->
-<v-select :options="options" label="country" index="code"  />
+<sb-vue-select :options="options" label="country" index="code"  />
 
 <!-- v3: using reduce --->
-<v-select :options="options" label="country" :reduce="country => country.code" />
+<sb-vue-select :options="options" label="country" :reduce="country => country.code" />
 ```
 
 View the full [documentation for `reduce`](values.md#returning-a-single-key-with-reduce).
@@ -33,16 +33,16 @@ prop you were using for an event.
 
 ### `onChange` & `onInput`
 
-In v2.x, Overwriting `onChange` in an application was more likely to break vue-select's internals 
+In v2.x, Overwriting `onChange` in an application was more likely to break shipblu-vue-select's internals 
 and cause issues. The `input` event provides identical functionality and can be swapped out in your 
 application. 
 
 ```html
 <!-- version 2: -->
-<v-select :on-change="doSomething" />
+<sb-vue-select :on-change="doSomething" />
 
 <!-- version 3: -->
-<v-select @input="doSomething" />
+<sb-vue-select @input="doSomething" />
 ```
 
 Additionally, the `change` event has been removed. This event was redundant, `input` should be used 
@@ -50,10 +50,10 @@ instead.
 
 ```html
 <!-- version 2: -->
-<v-select @change="doSomething" />
+<sb-vue-select @change="doSomething" />
 
 <!-- version 3: -->
-<v-select @input="doSomething" />
+<sb-vue-select @input="doSomething" />
 ```
 
 ### `onSearch`
@@ -63,10 +63,10 @@ has always provided the same parameters and can be used in it's place.
 
 ```html
 <!-- version 2: -->
-<v-select :on-search="doSomeAjax" />
+<sb-vue-select :on-search="doSomeAjax" />
 
 <!-- version 3: -->
-<v-select @search="doSomeAjax" />
+<sb-vue-select @search="doSomeAjax" />
 ```
 
 ### `@search` with null search string
@@ -82,8 +82,8 @@ CSS was removed from the JS bundle in favor of a separate CSS file to support SS
 customization.
 
   ```js
-  @import vSelect from 'vue-select`;
-  @import 'vue-select/dist/vue-select.css';
+  @import vSelect from 'shipblu-vue-select`;
+  @import 'shipblu-vue-select/dist/shipblu-vue-select.css';
   ```
 
 ## New Class Selector Prefix
@@ -106,11 +106,11 @@ been renamed to include the `vs__` prefix. The full list of renamed classes are 
 ## Internal State
 
 **The changes listed below are very unlikely to break your apps** unless you've been hooking into 
-vue-select internal values. [#781](https://github.com/sagalbot/vue-select/pull/781) 
+shipblu-vue-select internal values. [#781](https://github.com/sagalbot/shipblu-vue-select/pull/781) 
 (thanks [@owenconti!](https://github.com/owenconti)) introduced a number of optimizations to the 
 way that the component handles internal state.
 
-- `value`: the `value` prop is undefined by default. vue-select no longer maintains an internal `mutableValue` state when a `value` prop has been passed. When `:value` or `v-model` is not used, vue-select will maintain internal state using the `_value` property.
+- `value`: the `value` prop is undefined by default. shipblu-vue-select no longer maintains an internal `mutableValue` state when a `value` prop has been passed. When `:value` or `v-model` is not used, shipblu-vue-select will maintain internal state using the `_value` property.
 - `mutableOptions` has been removed in favor of an `optionList` computed property.
 
 ## Misc

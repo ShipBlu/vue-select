@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <v-select v-model="selected" v-bind="config" />
+    <sb-vue-select v-model="selected" v-bind="config" />
   </div>
 </template>
 
 <script>
-import vSelect from '../src/components/Select'
+import SbVueSelect from '../src/components/Select'
 import countries from '../docs/.vuepress/data/countryCodes'
 import books from '../docs/.vuepress/data/books'
 
 export default {
-  components: { vSelect },
+  components: { SbVueSelect },
   data: () => ({
     selected: null,
     config: {

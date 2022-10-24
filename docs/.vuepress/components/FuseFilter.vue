@@ -1,5 +1,5 @@
 <template>
-  <v-select
+  <sb-vue-select
     :filter="fuseSearch"
     :options="books"
     :get-option-label="(option) => option.title"
@@ -9,7 +9,7 @@
       <br />
       <cite>{{ author.firstName }} {{ author.lastName }}</cite>
     </template>
-  </v-select>
+  </sb-vue-select>
 </template>
 
 <script>

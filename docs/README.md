@@ -2,12 +2,12 @@
 
 # Vue Select
 
-![Current Release](https://img.shields.io/github/release/sagalbot/vue-select.svg?style=flat-square)
-![Release Date](https://img.shields.io/github/release-date/sagalbot/vue-select?style=flat-square)
-![Bundle Size](https://flat.badgen.net/bundlephobia/min/vue-select)
-![Monthly Downloads](https://img.shields.io/npm/dm/vue-select.svg?style=flat-square)
-![Coverage Status](https://coveralls.io/repos/github/sagalbot/vue-select/badge.svg?branch=master)
-![MIT License](https://img.shields.io/github/license/sagalbot/vue-select.svg?style=flat-square)
+![Current Release](https://img.shields.io/github/release/sagalbot/shipblu-vue-select.svg?style=flat-square)
+![Release Date](https://img.shields.io/github/release-date/sagalbot/shipblu-vue-select?style=flat-square)
+![Bundle Size](https://flat.badgen.net/bundlephobia/min/shipblu-vue-select)
+![Monthly Downloads](https://img.shields.io/npm/dm/shipblu-vue-select.svg?style=flat-square)
+![Coverage Status](https://coveralls.io/repos/github/sagalbot/shipblu-vue-select/badge.svg?branch=master)
+![MIT License](https://img.shields.io/github/license/sagalbot/shipblu-vue-select.svg?style=flat-square)
 
 > Everything you wish the HTML `<select>` element could do, wrapped
 > up into a lightweight, extensible Vue component.
@@ -40,5 +40,5 @@ developer experience, and customization. Huge thanks to the [sponsors](sponsors.
 
 ## Resources
 
-- **[GitHub](https://github.com/sagalbot/vue-select)**
+- **[GitHub](https://github.com/sagalbot/shipblu-vue-select)**
 - **[CodePen Template](http://codepen.io/sagalbot/pen/NpwrQO)**

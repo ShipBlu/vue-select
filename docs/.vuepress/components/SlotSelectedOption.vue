@@ -1,5 +1,5 @@
 <template>
-  <v-select v-model="selected" :options="books" label="title">
+  <sb-vue-select v-model="selected" :options="books" label="title">
     <template #selected-option="{ title, author }">
       <div style="display: flex; align-items: baseline">
         <strong>{{ title }}</strong>
@@ -8,7 +8,7 @@
         >
       </div>
     </template>
-  </v-select>
+  </sb-vue-select>
 </template>
 
 <script>

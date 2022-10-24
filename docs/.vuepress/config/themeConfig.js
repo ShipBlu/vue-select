@@ -1,5 +1,5 @@
 module.exports = {
-  repo: 'sagalbot/vue-select',
+  repo: 'sagalbot/shipblu-vue-select',
   editLinks: true,
   docsDir: 'docs',
   nav: [{ text: 'Sandbox', link: '/sandbox' }],

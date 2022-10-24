@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import VueSelect from '../src/components/Select.vue'
+import ShipbluVueSelect from '../src/components/Select.vue'
 import Vue from 'vue'
 
 /**
@@ -40,23 +40,23 @@ export const selectTag = async (Wrapper, searchText) => {
 }
 
 /**
- * Create a new VueSelect instance with
+ * Create a new ShipbluVueSelect instance with
  * a provided set of props.
  * @param propsData
  * @returns {Wrapper<Vue>}
  */
 export const selectWithProps = (propsData = {}) => {
-  return shallowMount(VueSelect, { propsData })
+  return shallowMount(ShipbluVueSelect, { propsData })
 }
 
 /**
- * Returns a Wrapper with a v-select component.
+ * Returns a Wrapper with a sb-vue-select component.
  * @param props
  * @param options
  * @return {Wrapper<Vue>}
  */
 export const mountDefault = (props = {}, options = {}) => {
-  return shallowMount(VueSelect, {
+  return shallowMount(ShipbluVueSelect, {
     propsData: {
       options: ['one', 'two', 'three'],
       ...props,
@@ -66,16 +66,16 @@ export const mountDefault = (props = {}, options = {}) => {
 }
 
 /**
- * Returns a v-select component directly.
+ * Returns a sb-vue-select component directly.
  * @param props
  * @param options
  * @return {Vue | Element | Vue[] | Element[]}
  */
 export const mountWithoutTestUtils = (props = {}, options = {}) => {
   return new Vue({
-    components: { VueSelect },
+    components: { ShipbluVueSelect },
     render: (createEl) =>
-      createEl('vue-select', {
+      createEl('shipblu-vue-select', {
         ref: 'select',
         props: { options: ['one', 'two', 'three'], ...props },
         ...options,

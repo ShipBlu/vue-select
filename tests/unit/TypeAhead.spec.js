@@ -1,12 +1,12 @@
 import { shallowMount } from '@vue/test-utils'
-import VueSelect from '../../src/components/Select'
+import ShipbluVueSelect from '../../src/components/Select'
 import { mountDefault, mountWithoutTestUtils } from '../helpers'
 import typeAheadMixin from '../../src/mixins/typeAheadPointer'
 import Vue from 'vue'
 
 describe('Moving the Typeahead Pointer', () => {
   it('should set the pointer to zero when the filteredOptions watcher is called', async () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: { options: ['one', 'two', 'three'] },
       sync: false,
     })
@@ -46,7 +46,7 @@ describe('Moving the Typeahead Pointer', () => {
   })
 
   it('will set the pointer to the selected option when opening', async () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         value: 'three',
         options: ['one', 'two', 'three'],
@@ -60,7 +60,7 @@ describe('Moving the Typeahead Pointer', () => {
   })
 
   it('will set the pointer to the reduced selected option when opening', async () => {
-    const Select = shallowMount(VueSelect, {
+    const Select = shallowMount(ShipbluVueSelect, {
       propsData: {
         value: 3,
         reduce: ({ value }) => value,

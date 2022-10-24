@@ -16,7 +16,7 @@ You may wish to roll your own deselect button. `Deselect` is used within tags on
 a simple `<button>Clear</button>` instead.
 
 ```html
-<v-select :components="{Deselect}" />
+<sb-vue-select :components="{Deselect}" />
 ``` 
 
 ```js
@@ -41,7 +41,7 @@ The `OpenIndicator` component is the 'caret' used within the component that adju
 based on whether the dropdown is open or closed.
 
 ```html
-<v-select :components="{OpenIndicator}" />
+<sb-vue-select :components="{OpenIndicator}" />
 ```
 ```js
 export default {
@@ -63,7 +63,7 @@ only having to set the implementation once, you can do so when registering Vue S
 
 ```js
 import Vue from 'vue';
-import vSelect from 'vue-select';
+import vSelect from 'shipblu-vue-select';
 
 // Set the components prop default to return our fresh components 
 vSelect.props.components.default = () => ({

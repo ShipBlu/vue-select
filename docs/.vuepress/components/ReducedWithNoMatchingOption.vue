@@ -1,5 +1,5 @@
 <template>
-  <v-select
+  <sb-vue-select
     v-model="selected"
     :reduce="(option) => option.id"
     :options="[

@@ -8,7 +8,7 @@ when the search text is updated. It is emitted with two parameters:
 - `loading {Function}`  Accepts a boolean parameter to toggle the loading state
 
 ```html
-<v-select @search="fetchOptions" />
+<sb-vue-select @search="fetchOptions" />
 ```
 
 ```js
@@ -24,7 +24,7 @@ fetchOptions (search, loading) {
 ```
 
 The `loading` function accepts a boolean parameter that will be assigned 
-to the vue-select internal `loading` property. Call `loading(true)` to set the 
+to the shipblu-vue-select internal `loading` property. Call `loading(true)` to set the 
 `loading` property to `true` - toggling the loading spinner. After your 
 asynchronous operation completes, call `loading(false)` to toggle it off.  
 

@@ -1,5 +1,5 @@
 <template>
-  <v-select
+  <sb-vue-select
     placeholder="Choose a book to read"
     label="title"
     :options="books"
