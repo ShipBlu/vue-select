@@ -63,10 +63,10 @@ only having to set the implementation once, you can do so when registering Vue S
 
 ```js
 import Vue from 'vue';
-import vSelect from 'shipblu-vue-select';
+import vShipbluSelect from 'shipblu-vue-select';
 
 // Set the components prop default to return our fresh components 
-vSelect.props.components.default = () => ({
+vShipbluSelect.props.components.default = () => ({
   Deselect: {
     render: createElement => createElement('span', '❌'),
   },
@@ -76,7 +76,7 @@ vSelect.props.components.default = () => ({
 });
 
 // Register the component
-Vue.component(vSelect)
+Vue.component(vShipbluSelect)
 ```
 
 <CustomComponentRegistration />

@@ -499,7 +499,7 @@ export default {
      * @type   {Function}
      * @param  {Array} list of options
      * @param  {String} search text
-     * @param  {Object} vSelect instance
+     * @param  {Object} vShipbluSelect instance
      * @return {Boolean}
      */
     filter: {

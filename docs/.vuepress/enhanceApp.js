@@ -1,7 +1,7 @@
-import vSelect from '../../src/components/Select'
+import vShipbluSelect from '../../src/components/Select'
 
 export default ({ Vue, options, router, siteData }) => {
-  Vue.component('sb-vue-select', vSelect)
+  Vue.component('sb-vue-select', vShipbluSelect)
 
   /**
    * Remove service workers.

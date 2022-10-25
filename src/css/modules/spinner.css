@@ -11,7 +11,7 @@
     border-left: 0.9em solid rgba(60, 60, 60, 0.45);
     transform: translateZ(0)
         scale(var(--vs-controls--spinner-size, var(--vs-controls-size)));
-    animation: vSelectSpinner 1.1s infinite linear;
+    animation: vShipbluSelectSpinner 1.1s infinite linear;
     transition: opacity 0.1s;
 }
 .vs__spinner,

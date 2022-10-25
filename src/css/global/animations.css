@@ -4,7 +4,7 @@
 }
 
 /* KeyFrames */
-@-webkit-keyframes vSelectSpinner {
+@-webkit-keyframes vShipbluSelectSpinner {
     0% {
         transform: rotate(0deg);
     }
@@ -13,7 +13,7 @@
     }
 }
 
-@keyframes vSelectSpinner {
+@keyframes vShipbluSelectSpinner {
     0% {
         transform: rotate(0deg);
     }

@@ -17,9 +17,9 @@ Then, import and register the component:
 
 ```js
 import Vue from 'vue'
-import vSelect from 'shipblu-vue-select'
+import vShipbluSelect from 'shipblu-vue-select'
 
-Vue.component('sb-vue-select', vSelect)
+Vue.component('sb-vue-select', vShipbluSelect)
 ```
 
 The component itself does not include any CSS. You'll need to include it separately:

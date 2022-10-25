@@ -82,7 +82,7 @@ CSS was removed from the JS bundle in favor of a separate CSS file to support SS
 customization.
 
   ```js
-  @import vSelect from 'shipblu-vue-select`;
+  @import vShipbluSelect from 'shipblu-vue-select`;
   @import 'shipblu-vue-select/dist/shipblu-vue-select.css';
   ```
 
