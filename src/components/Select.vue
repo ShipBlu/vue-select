@@ -25,7 +25,7 @@
           :disabled="disabled"
         >
           <span :key="getOptionKey(option)" class="vs__selected">
-            <div class="labels-parent">
+            <div>
               <p class="first-label">
                 <slot name="option" v-bind="normalizeOptionForSlot(option)">
                   {{ getOptionLabel(option) }}
@@ -1375,7 +1375,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .first-label {
   color: #000000;
   font-size: 14px;
@@ -1387,6 +1387,6 @@ export default {
   font-size: 13px;
 }
 .labels-parent:hover p {
-  color: white !important;
+  color: white;
 }
 </style>

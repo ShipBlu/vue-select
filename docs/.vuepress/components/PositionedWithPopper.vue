@@ -82,7 +82,19 @@ export default {
   border-top-color: transparent;
   border-bottom-color: rgba(60, 60, 60, 0.26);
 }
-
+.first-label {
+  color: #000000 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 2 !important;
+}
+.second-label {
+  color: #626262 !important;
+  font-size: 13px !important;
+}
+.labels-parent:hover p {
+  color: white !important;
+}
 [data-popper-placement='top'] {
   border-radius: 4px 4px 0 0;
   border-top-style: solid;

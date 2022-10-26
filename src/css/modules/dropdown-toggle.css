@@ -20,6 +20,20 @@
     white-space: normal;
 }
 
+.first-label {
+    color: #000000 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 2 !important;
+}
+  .second-label {
+    color: #626262 !important;
+    font-size: 13px !important;
+}
+  .labels-parent:hover p {
+    color: white !important;
+}
+
 .vs__selected-options {
     display: flex;
     flex-basis: 100%;

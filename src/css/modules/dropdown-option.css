@@ -11,7 +11,7 @@
 
 .vs__dropdown-option--highlight {
     background: var(--vs-dropdown-option--active-bg);
-    color: var(--vs-dropdown-option--active-color);
+    color: white !important;
 }
 
 .vs__dropdown-option--deselect {
