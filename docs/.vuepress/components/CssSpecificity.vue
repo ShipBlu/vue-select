@@ -29,7 +29,7 @@
   color: #626262 !important;
   font-size: 13px !important;
 }
-.labels-parent:hover p {
+.option-label:hover p {
   color: white !important;
 }
 

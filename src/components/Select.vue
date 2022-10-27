@@ -107,7 +107,7 @@
           :id="`vs${uid}__option-${index}`"
           :key="getOptionKey(option)"
           role="option"
-          class="vs__dropdown-option labels-parent"
+          class="vs__dropdown-option option-label"
           :class="{
             'vs__dropdown-option--deselect':
               isOptionDeselectable(option) && index === typeAheadPointer,
@@ -1386,7 +1386,7 @@ export default {
   color: #626262;
   font-size: 13px;
 }
-.labels-parent:hover p {
+.option-label:hover p {
   color: white;
 }
 </style>
