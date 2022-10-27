@@ -1,6 +1,6 @@
 {
   "name": "shipblu-vue-select",
-  "version": "3.20.16",
+  "version": "3.20.18",
   "description": "Everything you wish the HTML <select> element could do, wrapped up into a lightweight, extensible Vue component.",
   "author": "George Eshak <george.eshak@shipblu.com>",
   "homepage": "https://shipblu-vue-select.org",
