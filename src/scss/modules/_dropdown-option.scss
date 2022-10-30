@@ -10,10 +10,12 @@
 }
 
 .vs__dropdown-option--highlight {
-  background: $vs-state-active-bg;
   color: $vs-state-active-color;
 }
-
+.vs__dropdown-option--highlight:hover {
+  background: var(--vs-dropdown-option--active-bg);
+  color: white !important;
+}
 .vs__dropdown-option--deselect {
   background: $vs-state-deselect-bg;
   color: $vs-state-deselect-color;
