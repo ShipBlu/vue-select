@@ -92,7 +92,7 @@ export default {
   color: #626262 !important;
   font-size: 13px !important;
 }
-li:hover p {
+li.shipblu-option:hover p {
   color: white !important;
 }
 [data-popper-placement='top'] {

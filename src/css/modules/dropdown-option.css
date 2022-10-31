@@ -14,7 +14,7 @@
 }
 
 .vs__dropdown-option--highlight:hover {
-    background: var(--vs-dropdown-option--active-bg);
+    background: var(--vs-dropdown-option--active-bg) !important;
     color: white !important;
 }
 
