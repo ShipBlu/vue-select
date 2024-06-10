@@ -482,9 +482,9 @@ export default {
      */
     filterBy: {
       type: Function,
-      default(option, label, search) {
+      default(option, label, optionalLabel, search) {
         return (
-          (label || '')
+          (label || optionalLabel || '')
             .toLocaleLowerCase()
             .indexOf(search.toLocaleLowerCase()) > -1
         )
